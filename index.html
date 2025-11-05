@@ -11,313 +11,315 @@
   <script src="https://unpkg.com/feather-icons"></script>
 
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #0a0a0a;
-      color: #e5e5e5;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-    a {
-      transition: color 0.3s ease;
-    }
-    nav {
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: saturate(180%) blur(10px);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: #bbb;
-      font-weight: 600;
-      margin-left: 1.5rem;
-    }
-    nav a:hover {
-      color: #f0f0f0;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #f0f0f0;
-      cursor: default;
-      user-select: none;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1rem;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 0 8px #fff;
-      color: #f0f0f0;
-    }
-    .typed-text {
-      font-size: 1.5rem;
-      color: #999;
-      height: 2.5rem;       /* ارتفاع ثابت */
-      display: flex;
-      align-items: center;  /* وسط النص عموديًا */
-      justify-content: center;
-      margin-bottom: 2rem;
-      overflow: hidden;
-    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0a0a0a;
+      color: #e5e5e5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    a {
+      transition: color 0.3s ease;
+    }
+    nav {
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #bbb;
+      font-weight: 600;
+      margin-left: 1.5rem;
+    }
+    nav a:hover {
+      color: #f0f0f0;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #f0f0f0;
+      cursor: default;
+      user-select: none;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 8px #fff;
+      color: #f0f0f0;
+    }
+    .typed-text {
+      font-size: 1.5rem;
+      color: #999;
+      height: 2.5rem;       /* ارتفاع ثابت */
+      display: flex;
+      align-items: center;  /* وسط النص عموديًا */
+      justify-content: center;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
 
-    .btn-contact {
-      background: #e5e5e5;
-      color: #0a0a0a;
-      font-weight: 600;
-      padding: 0.75rem 2rem;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(229,229,229,0.3);
-      transition: all 0.3s ease;
-    }
-    .btn-contact:hover {
-      background: #bbb;
-      color: #0a0a0a;
-      box-shadow: 0 6px 20px rgba(187,187,187,0.6);
-    }
+    .btn-contact {
+      background: #e5e5e5;
+      color: #0a0a0a;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(229,229,229,0.3);
+      transition: all 0.3s ease;
+    }
+    .btn-contact:hover {
+      background: #bbb;
+      color: #0a0a0a;
+      box-shadow: 0 6px 20px rgba(187,187,187,0.6);
+    }
 
-    /* Section styles */
-    section {
-      max-width: 900px;
-      margin: 5rem auto;
-      padding: 0 1rem;
-    }
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      border-bottom: 3px solid #bbb;
-      display: inline-block;
-      padding-bottom: 0.2rem;
-      color: #e5e5e5;
-    }
-    p {
-      color: #ccc;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    /* Skills grid */
-    .skills-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .skill-item {
-      background: #1c1c1c;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 0 15px rgba(255,255,255,0.1);
-      transition: transform 0.3s ease;
-    }
-    .skill-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 25px rgba(255,255,255,0.2);
-    }
-    /* Certifications grid */
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
-    .cert-card {
-      background: #1c1c1c;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: default;
-    }
-    .cert-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 30px rgba(255,255,255,0.2);
-    }
-    .cert-card img {
-      max-height: 120px;
-      margin-bottom: 1rem;
-      object-fit: contain;
-      filter: brightness(0.9);
-      transition: filter 0.3s ease;
-    }
-    .cert-card:hover img {
-      filter: brightness(1);
-    }
-    .cert-title {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #e5e5e5;
-    }
-    /* Projects grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-    .project-card {
-      background: #1c1c1c;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 0 25px rgba(255,255,255,0.1);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 40px rgba(255,255,255,0.2);
-    }
-    .project-img {
-      width: 100%;
-      height: 140px;
-      border-radius: 10px;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      filter: brightness(0.85);
-      transition: filter 0.3s ease;
-    }
-    .project-card:hover .project-img {
-      filter: brightness(1);
-    }
-    .project-title {
-      font-weight: 700;
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: #e5e5e5;
-    }
-    .project-desc {
-      flex-grow: 1;
-      color: #ddd;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    .download-btn {
-      align-self: flex-start;
-      background: #e5e5e5;
-      color: #0a0a0a;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 3px 10px rgba(229,229,229,0.5);
-      transition: background 0.3s ease;
-    }
-    .download-btn:hover {
-      background: #bbb;
-    }
-    /* Contact Section */
-    #contact {
-      max-width: 500px;
-      margin: 5rem auto;
-      padding: 2rem 1rem;
-      background: #1c1c1c;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255,255,255,0.1);
-      text-align: center;
-    }
-    #contact h2 {
-      margin-bottom: 2rem;
-      color: #e5e5e5;
-    }
-    .contact-icons a {
-      color: #bbb;
-      margin: 0 1rem;
-      font-size: 1.8rem;
-      transition: color 0.3s ease;
-    }
-    .contact-icons a:hover {
-      color: #e5e5e5;
-    }
-    .contact-info p {
-      margin: 0.5rem 0;
-      font-weight: 600;
-      color: #ddd;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      background: #222;
-      border: none;
-      color: #eee;
-      font-size: 1rem;
-      resize: vertical;
-      transition: box-shadow 0.3s ease;
-    }
-    form input:focus, form textarea:focus {
-      outline: none;
-      box-shadow: 0 0 8px #ddd;
-      background: #111;
-    }
-    form button {
-      width: 100%;
-      padding: 0.9rem;
-      background: #e5e5e5;
-      border: none;
-      border-radius: 30px;
-      color: #0a0a0a;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    form button:hover {
-      background: #bbb;
-    }
+    /* Section styles */
+    section {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #bbb;
+      display: inline-block;
+      padding-bottom: 0.2rem;
+      color: #e5e5e5;
+    }
+    p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    /* Skills grid (MODIFIED) */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+      justify-content: start; /* تأكيد المحاذاة اليسرى للشبكة */
+    }
+    .skill-item {
+      background: #1c1c1c;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+      text-align: left; /* تأكيد محاذاة النص لليسار داخل كل بطاقة */
+    }
+    .skill-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+    }
+    /* Certifications grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    .cert-card {
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .cert-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(255,255,255,0.2);
+    }
+    .cert-card img {
+      max-height: 120px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+      filter: brightness(0.9);
+      transition: filter 0.3s ease;
+    }
+    .cert-card:hover img {
+      filter: brightness(1);
+    }
+    .cert-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #e5e5e5;
+    }
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 25px rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(255,255,255,0.2);
+    }
+    .project-img {
+      width: 100%;
+      height: 140px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      filter: brightness(0.85);
+      transition: filter 0.3s ease;
+    }
+    .project-card:hover .project-img {
+      filter: brightness(1);
+    }
+    .project-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #e5e5e5;
+    }
+    .project-desc {
+      flex-grow: 1;
+      color: #ddd;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .download-btn {
+      align-self: flex-start;
+      background: #e5e5e5;
+      color: #0a0a0a;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(229,229,229,0.5);
+      transition: background 0.3s ease;
+    }
+    .download-btn:hover {
+      background: #bbb;
+    }
+    /* Contact Section */
+    #contact {
+      max-width: 500px;
+      margin: 5rem auto;
+      padding: 2rem 1rem;
+      background: #1c1c1c;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    #contact h2 {
+      margin-bottom: 2rem;
+      color: #e5e5e5;
+    }
+    .contact-icons a {
+      color: #bbb;
+      margin: 0 1rem;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+    .contact-icons a:hover {
+      color: #e5e5e5;
+    }
+    .contact-info p {
+      margin: 0.5rem 0;
+      font-weight: 600;
+      color: #ddd;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      background: #222;
+      border: none;
+      color: #eee;
+      font-size: 1rem;
+      resize: vertical;
+      transition: box-shadow 0.3s ease;
+    }
+    form input:focus, form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px #ddd;
+      background: #111;
+    }
+    form button {
+      width: 100%;
+      padding: 0.9rem;
+      background: #e5e5e5;
+      border: none;
+      border-radius: 30px;
+      color: #0a0a0a;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #bbb;
+    }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: #000;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #222;
-      user-select: none;
-    }
-    footer strong {
-      color: #e5e5e5;
-    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: #000;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+      user-select: none;
+    }
+    footer strong {
+      color: #e5e5e5;
+    }
 
-    @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
-    }
-    .contact-icons a {
-      color: #bbb;
-      margin: 0 1rem;
-      font-size: 1.8rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .contact-icons a:hover {
-      color: #f0f0f0;
-      transform: scale(1.2);
-    }
-  </style>
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+    .contact-icons a {
+      color: #bbb;
+      margin: 0 1rem;
+      font-size: 1.8rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .contact-icons a:hover {
+      color: #f0f0f0;
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 
   <body>
