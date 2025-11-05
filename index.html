@@ -67,15 +67,15 @@
       color: #f0f0f0;
     }
     .typed-text {
-      font-size: 1.5rem;
-      color: #999;
-      height: 2.5rem;       /* ارتفاع ثابت */
-      display: flex;
-      align-items: center;  /* وسط النص عموديًا */
-      justify-content: center;
-      margin-bottom: 2rem;
-      overflow: hidden;
-    }
+  font-size: 1.5rem;
+  color: #999;
+  height: 2.5rem;       /* ارتفاع ثابت */
+  display: flex;
+  align-items: center;  /* وسط النص عموديًا */
+  justify-content: center;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
 
     .btn-contact {
       background: #e5e5e5;
@@ -314,7 +314,8 @@
 <nav class="bg-black bg-opacity-90 backdrop-blur-md fixed w-full top-0 left-0 z-50 px-4 py-3 flex items-center justify-between">
   <div class="logo font-bold text-white text-xl cursor-default select-none">Majed</div>
 
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none z-50 relative">
+  <!-- زر الهامبرغر -->
+  <button id="menu-btn" class="block md:hidden text-white focus:outline-none z-50 relative">
     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="3" y1="6" x2="21" y2="6" />
       <line x1="3" y1="12" x2="21" y2="12" />
@@ -322,7 +323,8 @@
     </svg>
   </button>
 
-    <div id="menu" class="hidden md:flex space-x-6 text-gray-300 font-semibold">
+  <!-- روابط الديسكتوب -->
+  <div id="menu" class="hidden md:flex space-x-6 text-gray-300 font-semibold">
     <a href="#about" class="hover:text-white transition">About</a>
     <a href="#skills" class="hover:text-white transition">Skills</a>
     <a href="#certs" class="hover:text-white transition">Certifications</a>
@@ -330,7 +332,8 @@
     <a href="#contact" class="hover:text-white transition">Contact</a>
   </div>
 
-    <div id="mobile-menu"
+  <!-- القائمة المنسدلة للجوال -->
+  <div id="mobile-menu"
        class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-95 text-white flex flex-col items-center justify-center space-y-10 text-2xl font-semibold z-40 opacity-0 pointer-events-none transition-all duration-500 ease-in-out">
     <a href="#about" class="hover:text-gray-300 transition">About</a>
     <a href="#skills" class="hover:text-gray-300 transition">Skills</a>
@@ -344,7 +347,7 @@
 
 <section class="hero" id="home">
   <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">
-    Majed Al-Shammari
+    Majed
   </h1>
 
   <p class="typed-text text-lg sm:text-xl text-gray-400 mb-6">
@@ -364,13 +367,13 @@
   </div>
 </section>
 
-<section id="about" data-aos="fade-up"> <section id="education" data-aos="fade-up"> <h2>Education</h2> <div class="space-y-4"> <div class="bg-[#1c1c1c] p-5 rounded-lg shadow-md border border-gray-700"> <h3 class="text-xl font-semibold text-white">Bachelor of Science in Information Security</h3> <p class="text-gray-400">College of Computer Science & Engineering, University of Hail, Saudi Arabia</p> <p class="text-sm text-gray-500">2021/5 – 2026/5</p> </div> <div class="bg-[#1c1c1c] p-5 rounded-lg shadow-md border border-gray-700"> <h3 class="text-lg font-semibold text-white">Active Member</h3> <ul class="list-disc list-inside text-gray-400 mt-2"> <li>Cybersecurity Club (CSC)</li> <li>CyberWings Team — Since November 2024</li> </ul> </div> </div> </section>
+<!-- About Section --> <section id="about" data-aos="fade-up"> <!-- Education Section --> <section id="education" data-aos="fade-up"> <h2>Education</h2> <div class="space-y-4"> <div class="bg-[#1c1c1c] p-5 rounded-lg shadow-md border border-gray-700"> <h3 class="text-xl font-semibold text-white">Bachelor of Science in Information Security</h3> <p class="text-gray-400">College of Computer Science & Engineering, University of Hail, Saudi Arabia</p> <p class="text-sm text-gray-500">2021/5 – 2026/5</p> </div> <div class="bg-[#1c1c1c] p-5 rounded-lg shadow-md border border-gray-700"> <h3 class="text-lg font-semibold text-white">Active Member</h3> <ul class="list-disc list-inside text-gray-400 mt-2"> <li>Cybersecurity Club (CSC)</li> <li>CyberWings Team — Since November 2024</li> </ul> </div> </div> </section>
 <h2>About Me</h2>
 <p>
   I’m <strong>Majed Al-Shammari</strong>, a final-year <strong>Information Security student</strong> and <strong>Head of the Cybersecurity Club (CSC)</strong> at the University of Ha’il. I’m currently completing my <strong>co-op training</strong> at the <strong>Cybersecurity Department – Hail Municipality</strong>, specializing in <strong>Governance, Risk Management, and Compliance (GRC)</strong>.
 </p>
 <p>
-  I hold multiple globally recognized certifications, including <strong>GRCP®, GRCA®, eCDFP, eJPTv2, eEDA, and eCTHP</strong>. My expertise spans **risk assessment, policy development, and implementing compliance frameworks** to strengthen organizational cybersecurity and align with regulatory standards.
+  I hold multiple globally recognized certifications, including <strong>GRCP®, GRCA®, eCDFP, eJPTv2, eEDA, and eCTHP</strong>. My expertise spans <strong>risk assessment, policy development, and implementing compliance frameworks</strong> to strengthen organizational cybersecurity and align with regulatory standards.
 </p>
 <p>
   Passionate about cybersecurity and governance, I aim to build a career as a <strong>GRC Specialist</strong>, bridging the gap between technical security operations and strategic business objectives. I’m dedicated to continuous learning, leadership, and advancing cybersecurity practices across both public and private sectors.
@@ -378,34 +381,24 @@
 </section>
 
 
-    <section id="skills" data-aos="fade-up">
-    <h2>GRC & Technical Skills</h2>
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up">
+    <h2>Technical Skills</h2>
     <div class="skills-list">
-            <div class="skill-item">**Governance, Risk Management, and Compliance (GRC)**</div>
-      <div class="skill-item">**Security Policy Development (NCA/ISO 27001 Alignment)**</div>
-      <div class="skill-item">**Risk Assessment (NIST Methodology) & Mitigation**</div>
-      <div class="skill-item">**Regulatory Compliance (NCA, SAMA) & Audit Preparation**</div>
-            <div class="skill-item">Penetration Testing, Ethical Hacking, Vulnerability Assessment</div>
-      <div class="skill-item">Incident Response, Security Monitoring, Threat Hunting</div>
+      <div class="skill-item">Penetration Testing, Ethical Hacking, Vulnerability Assessment</div>
+      <div class="skill-item">Incident Response, Risk Assessment, Security Monitoring</div>
       <div class="skill-item">Python, Java, SQL, HTML/CSS</div>
       <div class="skill-item">Kali Linux, Wireshark, Burp Suite, Nmap, Metasploit</div>
       <div class="skill-item">Nessus, SIEM, Windows, Linux, macOS</div>
-      <div class="skill-item">Standards: NIST RMF, OWASP, ISO 27001</div>
+      <div class="skill-item">Standards: NIST, OWASP, ISO 27001</div>
     </div>
   </section>
 
-   <section id="certs" data-aos="fade-up">
+  <!-- Certifications Section -->
+ <section id="certs" data-aos="fade-up">
   <h2>Certifications</h2>
   <div class="certs-grid">
-        <div class="cert-card" data-tilt>
-      <img src="images/certs/grcp.jpg" alt="GRCP" />
-      <div class="cert-title">GRCP® (GRC Professional) - OCEG</div>
-    </div>
     <div class="cert-card" data-tilt>
-      <img src="images/certs/grca.jpg" alt="GRCA" />
-      <div class="cert-title">GRCA® (GRC Auditor) - OCEG</div>
-    </div>
-        <div class="cert-card" data-tilt>
       <img src="images/certs/eJPT.jpg" alt="eJPT" />
       <div class="cert-title">eJPT – INE</div>
     </div>
@@ -445,19 +438,11 @@
 </section>
 
 
-    <section id="projects" data-aos="fade-up">
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
     <h2>Experience & Projects</h2>
     <div class="projects-grid">
-            <div class="project-card" data-tilt>
-        <img src="images/risk_register.png" alt="Cyber Risk Register" class="project-img" />
-        <div class="project-title">Cyber Risk Register Development (GRC)</div>
-        <div class="project-desc">
-          Designed and implemented the department’s Risk Register, identifying critical assets and assessing risk probability and impact based on the NCA framework during co-op training.
-        </div>
-        <a href="#" class="download-btn">🔗 View Documentation</a>
-      </div>
-      
-            <div class="project-card" data-tilt>
+      <div class="project-card" data-tilt>
         <img src="images/dns_spoofing.png" alt="DNS Spoofing" class="project-img" />
         <div class="project-title">DNS Spoofing Attack</div>
         <div class="project-desc">
@@ -492,6 +477,7 @@
     </div>
   </section>
 
+<!-- Contact Section -->
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
 
@@ -506,7 +492,8 @@
     </a>
   </div>
 
-    <form id="contact-form" class="max-w-md mx-auto text-left">
+  <!-- Contact Form (with JS success message) -->
+  <form id="contact-form" class="max-w-md mx-auto text-left">
     <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-[#222] text-white mb-4" />
     <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-[#222] text-white mb-4" />
     <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-[#222] text-white mb-4"></textarea>
@@ -515,6 +502,7 @@
   </form>
 </section>
 
+<!-- JS to handle Formspree submission -->
 <script>
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -584,10 +572,10 @@
 
     const typed = new Typed('.typed-text', {
       strings: [
-        'GRC Specialist',
-        'Information Security Student',
-        'Risk & Compliance Analyst',
-        'Ethical Hacker'
+        'Cybersecurity Student',
+        'Ethical Hacker',
+        'SOC Analyst',
+        'Passionate About Defense'
       ],
       typeSpeed: 50,
       backSpeed: 30,
@@ -653,5 +641,4 @@
 
 
 </body>
-</html>
-```
+</html> شرايك بموقعي ؟
