@@ -12,6 +12,75 @@
 
   <style>
     body {
+
+.timeline {
+    position: relative;
+    padding-left: 0; 
+    margin-left: 0;
+}
+
+
+
+.timeline-item {
+    margin-bottom: 3rem; 
+    position: relative;
+    padding-left: 3rem;
+    transition: transform 0.3s ease; 
+}
+.timeline-item:hover {
+    transform: translateX(5px); 
+}
+
+
+.timeline-item .timeline-pin { 
+    position: absolute;
+    top: 0rem; 
+    left: 0;
+    width: 2.5rem; 
+    height: 2.5rem;
+    background: #e5e5e5; 
+    border: 3px solid #0a0a0a; 
+    border-radius: 50%;
+    z-index: 10;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    box-shadow: 0 0 15px rgba(229,229,229,0.2); 
+}
+
+.timeline-item .timeline-pin img {
+    max-width: 70%;
+    max-height: 70%; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%; 
+}
+
+
+.timeline-card {
+    background: #1c1c1c; 
+    border-radius: 12px; 
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5); 
+    border: 1px solid #282828; 
+    transition: all 0.3s ease;
+}
+.timeline-card:hover {
+    border-color: #555; 
+}
+
+.experience-tag {
+    display: inline-block;
+    background-color: #444; 
+    color: #eee;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; 
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-top: 0.75rem;
+}
       font-family: 'Montserrat', sans-serif;
       background-color: #0a0a0a;
       color: #e5e5e5;
@@ -69,9 +138,9 @@
     .typed-text {
   font-size: 1.5rem;
   color: #999;
-  height: 2.5rem;       /* ارتفاع ثابت */
+  height: 2.5rem;       
   display: flex;
-  align-items: center;  /* وسط النص عموديًا */
+  align-items: center;  
   justify-content: center;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -94,7 +163,6 @@
       box-shadow: 0 6px 20px rgba(187,187,187,0.6);
     }
 
-    /* Section styles */
     section {
       max-width: 900px;
       margin: 5rem auto;
@@ -132,7 +200,6 @@
       transform: translateY(-6px);
       box-shadow: 0 0 25px rgba(255,255,255,0.2);
     }
-    /* Certifications grid */
     .certs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -314,7 +381,6 @@
 <nav class="bg-black bg-opacity-90 backdrop-blur-md fixed w-full top-0 left-0 z-50 px-4 py-3 flex items-center justify-between">
   <div class="logo font-bold text-white text-xl cursor-default select-none">Majed</div>
 
-  <!-- زر الهامبرغر -->
   <button id="menu-btn" class="block md:hidden text-white focus:outline-none z-50 relative">
     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="3" y1="6" x2="21" y2="6" />
@@ -323,7 +389,6 @@
     </svg>
   </button>
 
-  <!-- روابط الديسكتوب -->
   <div id="menu" class="hidden md:flex space-x-6 text-gray-300 font-semibold">
     <a href="#about" class="hover:text-white transition">About</a>
     <a href="#skills" class="hover:text-white transition">Skills</a>
@@ -332,7 +397,6 @@
     <a href="#contact" class="hover:text-white transition">Contact</a>
   </div>
 
-  <!-- القائمة المنسدلة للجوال -->
   <div id="mobile-menu"
        class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-95 text-white flex flex-col items-center justify-center space-y-10 text-2xl font-semibold z-40 opacity-0 pointer-events-none transition-all duration-500 ease-in-out">
     <a href="#about" class="hover:text-gray-300 transition">About</a>
@@ -367,55 +431,107 @@
   </div>
 </section>
 
-
-  <!-- About Section -->
-  <section id="about" data-aos="fade-up">
-    <!-- Education Section -->
-<section id="education" data-aos="fade-up">
-  <h2>Education</h2>
-  <div class="space-y-4">
-    <div class="bg-[#1c1c1c] p-5 rounded-lg shadow-md border border-gray-700">
-      <h3 class="text-xl font-semibold text-white">Bachelor of Science in Information Security</h3>
-      <p class="text-gray-400">College of Computer Science & Engineering, University of Hail, Saudi Arabia</p>
-      <p class="text-sm text-gray-500">2021/5 – 2026/5</p>
-    </div>
-
-    <div class="bg-[#1c1c1c] p-5 rounded-lg shadow-md border border-gray-700">
-      <h3 class="text-lg font-semibold text-white">Active Member</h3>
-      <ul class="list-disc list-inside text-gray-400 mt-2">
-        <li>Cybersecurity Club (CSC)</li>
-        <li>CyberWings Team — Since November 2024</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<h2>About Me</h2>
-  <p>
+<section id="about" data-aos="fade-up"> 
+    <h2>About Me</h2>
+    <p>
     I’m Majed Al-Shammari, a final-year Information Security student and Head of the Cybersecurity Club (CSC) at the University of Ha’il. I’m currently completing my co-op training at the Cybersecurity Department – Hail Municipality, specializing in Governance, Risk Management, and Compliance (GRC).
-  </p>
-  <p>
-    I hold several globally recognized certifications, including GRCP®, GRCA®, eCDFP, eJPTv2, eEDA, and eCTHP. My expertise includes risk assessment, policy development, and implementing compliance frameworks to enhance organizational security and align with regulatory standards.
-  </p>
-  <p>
-    Passionate about cybersecurity and governance, I aim to build a strong career as a GRC Specialist, bridging the gap between technical security operations and strategic business objectives. I’m committed to continuous learning, leadership, and contributing to advancing cybersecurity practices across both public and private sectors.
-  </p>
+    </p>
+    <p>
+      I hold several globally recognized certifications, including GRCP®, GRCA®, eCDFP, eJPTv2, eEDA, and eCTHP. My expertise includes risk assessment, policy development, and implementing compliance frameworks to enhance organizational security and align with regulatory standards.
+    </p>
+    <p>
+      Passionate about cybersecurity and governance, I aim to build a strong career as a GRC Specialist, bridging the gap between technical security operations and strategic business objectives. I’m committed to continuous learning, leadership, and contributing to advancing cybersecurity practices across both public and private sectors.
+    </p>
 </section>
 
-  <!-- Skills Section -->
-  <section id="skills" data-aos="fade-up">
-    <h2>Technical Skills</h2>
-    <div class="skills-list">
-      <div class="skill-item">Penetration Testing, Ethical Hacking, Vulnerability Assessment</div>
-      <div class="skill-item">Incident Response, Risk Assessment, Security Monitoring</div>
-      <div class="skill-item">Python, Java, SQL, HTML/CSS</div>
-      <div class="skill-item">Kali Linux, Wireshark, Burp Suite, Nmap, Metasploit</div>
-      <div class="skill-item">Nessus, SIEM, Windows, Linux, macOS</div>
-      <div class="skill-item">Standards: NIST, OWASP, ISO 27001</div>
+
+<section id="education" data-aos="fade-up">
+    <h2>Education & Leadership</h2>
+    <div class="timeline">
+        
+        <div class="timeline-item">
+            <div class="timeline-pin">
+                <img src="images/university-logo.png" alt="University Logo" /> 
+            </div>
+            <div class="timeline-card">
+                <h3 class="text-xl font-semibold text-white">Bachelor of Science in Information Security</h3>
+                
+                <p class="text-gray-400 text-sm mb-2">2021/5 – 2026/5</p> 
+                <p class="text-gray-400">College of Computer Science & Engineering, University of Hail, Saudi Arabia</p>
+                <div class="mt-4">
+                    <span class="experience-tag">Cybersecurity</span>
+                    <span class="experience-tag">Information Security</span>
+                    <span class="experience-tag">Academic Study</span>
+                </div>
+            </div>
+        </div>
+        
+<div class="timeline-item">
+            <div class="timeline-pin">
+                <img src="images/club-logo.png" alt="Club Logo" /> 
+            </div>
+            <div class="timeline-card">
+                <h3 class="text-lg font-semibold text-white">Club Leadership & Activities</h3>
+                
+                <p class="text-gray-400 text-sm mb-2">Since November 2024</p> 
+                
+                <ul class="list-disc list-inside text-gray-400 ml-4">
+                    <li>Head of Cybersecurity Club (CSC) — Promoted Aug 2025</li>
+                    <li>CyberWings Team Member — (Nov 2024 – Aug 2025)</li>
+                </ul>
+                <p class="text-gray-400 mt-3 italic text-sm">
+                    Leveraged hands-on technical experience with CyberWings to manage and lead the entire club's strategic and operational activities.
+                </p>
+
+                <div class="mt-4">
+                    <span class="experience-tag">Leadership</span>
+                    <span class="experience-tag">Team Management</span>
+                    <span class="experience-tag">Strategic Planning</span>
+                </div>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-pin">
+                <img src="images/training-logo.png" alt="Training Logo" /> 
+            </div>
+            <div class="timeline-card">
+                <h3 class="text-lg font-semibold text-white">Co-op Training Program</h3>
+                
+                <p class="text-gray-400 text-sm mb-2">2025/6 – 2026/1</p> 
+                <p class="text-gray-400">
+                    General Directorate of Cybersecurity / Hail Municipality — Governance, Risk, and Compliance (GRC) Department
+                </p>
+                
+                <div class="mt-4">
+                    <span class="experience-tag">GRC</span>
+                    <span class="experience-tag">Risk Assessment</span>
+                    <span class="experience-tag">Compliance</span>
+                </div>
+            </div>
+        </div>
+        
     </div>
+</section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>GRC & Cybersecurity Skills</h2>
+<div class="skills-list">
+    <div class="skill-item">Governance, Risk, and Compliance (GRC) Principles</div>
+    <div class="skill-item">Risk Assessment & Management (NIST RMF/ISO 27005)</div>
+    <div class="skill-item">Policy Development, Audit, and Compliance Reporting</div>
+
+    <div class="skill-item">Incident Response, Security Monitoring (SIEM, Nessus)</div>
+    <div class="skill-item">Vulnerability Management & Configuration Hardening</div>
+    <div class="skill-item">Standards: NIST, ISO 27001, NCA, OWASP</div> 
+    
+    <div class="skill-item">Penetration Testing, Ethical Hacking, Vulnerability Assessment</div>
+    <div class="skill-item">Tools: Kali Linux, Wireshark, Burp Suite, Nmap, Metasploit</div>
+
+    <div class="skill-item">Programming: Python, Java, SQL, HTML/CSS</div>
+    <div class="skill-item">OS: Windows Server, Linux (Kali, Ubuntu), macOS</div>
+</div>
   </section>
 
-<!-- Certifications Section -->
 <section id="certs" data-aos="fade-up">
   <h2>Certifications</h2>
   <div class="certs-grid">
@@ -474,7 +590,6 @@
   </div>
 </section>
 
-  <!-- Projects Section -->
   <section id="projects" data-aos="fade-up">
     <h2>Experience & Projects</h2>
     <div class="projects-grid">
@@ -513,7 +628,6 @@
     </div>
   </section>
 
-<!-- Contact Section -->
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
 
@@ -528,7 +642,6 @@
     </a>
   </div>
 
-  <!-- Contact Form (with JS success message) -->
   <form id="contact-form" class="max-w-md mx-auto text-left">
     <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-[#222] text-white mb-4" />
     <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-[#222] text-white mb-4" />
@@ -538,7 +651,6 @@
   </form>
 </section>
 
-<!-- JS to handle Formspree submission -->
 <script>
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -607,12 +719,12 @@
     feather.replace();
 
     const typed = new Typed('.typed-text', {
-      strings: [
-        'Cybersecurity Student',
-        'Ethical Hacker',
-        'SOC Analyst',
-        'Passionate About Defense'
-      ],
+strings: [
+  'GRC Specialist',
+  'Cybersecurity Governance',
+  'Risk &amp; Compliance Analyst',
+  'Bridging Tech &amp; Business Strategy'
+],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1500,
@@ -621,7 +733,6 @@
       cursorChar: '|',
     });
 
-    // GSAP fade-in animations on scroll (simple version)
     gsap.utils.toArray('section').forEach(section => {
       gsap.from(section, {
         opacity: 0,
@@ -652,7 +763,6 @@
     }
   });
 
-  // Smooth scroll + auto close menu on mobile
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
@@ -668,7 +778,6 @@
         });
       }
 
-      // إغلاق القائمة بعد الضغط
       mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
       mobileMenu.classList.add('opacity-0', 'pointer-events-none');
     });
@@ -678,4 +787,3 @@
 
 </body>
 </html>
-  
